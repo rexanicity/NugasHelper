@@ -13,3 +13,7 @@ Route::get('/price', function () {
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
+Route::get('/test', function () {
+    return 'Laravel OK!';
+});

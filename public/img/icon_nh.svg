@@ -1,0 +1,86 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Clean gradient palette -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667EEA"/>
+      <stop offset="100%" style="stop-color:#764BA2"/>
+    </linearGradient>
+    
+    <linearGradient id="accentColor" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B6B"/>
+      <stop offset="100%" style="stop-color:#FF8E53"/>
+    </linearGradient>
+    
+    <linearGradient id="lightAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ECDC4"/>
+      <stop offset="100%" style="stop-color:#44A08D"/>
+    </linearGradient>
+    
+    <!-- Subtle shadow -->
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.2" flood-color="#2D3748"/>
+    </filter>
+  </defs>
+  
+  <!-- Main hexagonal container -->
+  <polygon points="50,5 85,27.5 85,72.5 50,95 15,72.5 15,27.5" 
+           fill="url(#bgGradient)" filter="url(#softShadow)"/>
+  
+  <!-- Inner highlight -->
+  <polygon points="50,10 80,30 80,70 50,90 20,70 20,30" 
+           fill="none" stroke="white" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Central icon: Book with helping hand -->
+  <g transform="translate(50, 50)">
+    
+    <!-- Open book base -->
+    <g fill="white" opacity="0.95">
+      <!-- Left page -->
+      <path d="M-15 -8 Q-15 -12 -12 -12 L-2 -12 Q0 -12 0 -10 L0 8 Q0 10 -2 10 L-12 10 Q-15 10 -15 8 Z"/>
+      <!-- Right page -->
+      <path d="M15 -8 Q15 -12 12 -12 L2 -12 Q0 -12 0 -10 L0 8 Q0 10 2 10 L12 10 Q15 10 15 8 Z"/>
+      <!-- Book spine -->
+      <rect x="-1" y="-12" width="2" height="22" fill="url(#lightAccent)"/>
+    </g>
+    
+    <!-- Task lines on left page -->
+    <g stroke="url(#bgGradient)" stroke-width="1" opacity="0.6">
+      <line x1="-12" y1="-6" x2="-4" y2="-6"/>
+      <line x1="-12" y1="-2" x2="-4" y2="-2"/>
+      <line x1="-12" y1="2" x2="-4" y2="2"/>
+    </g>
+    
+    <!-- Checkmarks on right page -->
+    <g stroke="url(#accentColor)" stroke-width="2" fill="none" stroke-linecap="round">
+      <path d="M4 -6 L6 -4 L10 -8"/>
+      <path d="M4 -2 L6 0 L10 -4"/>
+      <path d="M4 2 L6 4 L10 0"/>
+    </g>
+    
+    <!-- Helping hand gesture -->
+    <g transform="translate(0, -22)">
+      <ellipse cx="0" cy="0" rx="8" ry="5" fill="url(#lightAccent)" opacity="0.8"/>
+      <!-- Thumb -->
+      <ellipse cx="-3" cy="-2" rx="2" ry="3" fill="url(#lightAccent)" opacity="0.8"/>
+      <!-- Index finger pointing down -->
+      <ellipse cx="0" cy="5" rx="1.5" ry="4" fill="url(#lightAccent)" opacity="0.8"/>
+    </g>
+  </g>
+  
+  <!-- Corner brand elements -->
+  <!-- "N" in top left -->
+  <circle cx="22" cy="22" r="8" fill="white" opacity="0.9"/>
+  <text x="22" y="27" font-family="Arial, sans-serif" font-size="10" font-weight="bold" 
+        fill="url(#bgGradient)" text-anchor="middle">N</text>
+  
+  <!-- "H" in bottom right -->
+  <circle cx="78" cy="78" r="8" fill="white" opacity="0.9"/>
+  <text x="78" y="83" font-family="Arial, sans-serif" font-size="10" font-weight="bold" 
+        fill="url(#bgGradient)" text-anchor="middle">H</text>
+  
+  <!-- Decorative dots -->
+  <circle cx="25" cy="75" r="2" fill="url(#accentColor)" opacity="0.7"/>
+  <circle cx="75" cy="25" r="2" fill="url(#lightAccent)" opacity="0.7"/>
+  <circle cx="15" cy="50" r="1.5" fill="white" opacity="0.6"/>
+  <circle cx="85" cy="50" r="1.5" fill="white" opacity="0.6"/>
+</svg>

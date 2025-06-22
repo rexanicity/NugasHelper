@@ -1,3 +1,3 @@
 #!/bin/bash
 chmod -R 755 .
-php -S 0.0.0.0:${PORT:-8080} -t public
+php artisan serve --host 0.0.0.0 --port $PORT
